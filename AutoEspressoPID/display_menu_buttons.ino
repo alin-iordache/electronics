@@ -1,4 +1,13 @@
 /*
+ This file is divided in 3 sections:
+ - the 1st one is copied from http://playground.arduino.cc/Code/PCD8544 and represents the code to display data on screen
+ - the 2nd one is the menu I use to enter temperature and extraction time
+ - the 3rd one represents the buttons - menu integration
+*/
+
+//                  ------------------------------------------------ DISPLAY--------------------------------------------
+
+/*
 This Code has extra features 
 including a XY positioning function on Display
 and a Line Draw function on Nokia 3310 LCD 
@@ -199,7 +208,10 @@ void gotoXY(int x, int y)
 
 }
 
-//                                   ------------ MENU -----------
+
+
+
+//                  ------------------------------------------------ MENU -----------------------------------------------
 
 #define SET_MODE 0
 #define NAV_MODE 1
@@ -298,7 +310,11 @@ int getExtractionTime(){
 }
 
 
-//                             ------------ BUTTONS -----------
+
+
+
+
+//            ------------------------------------------------ BUTTONS -----------------------------------------------
 
 
 #define PIN_BTN 3
