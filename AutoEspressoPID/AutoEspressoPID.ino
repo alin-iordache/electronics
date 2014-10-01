@@ -30,20 +30,17 @@ void setup(void)
 {
   PidSetup();
   
-  LcdInitialise();
-  LcdClear();
+  initLCD();
   
   Serial.begin(9600);
-  initialiseMenu();
-  enter();
-  
+  initialiseMenu();  
 }
 
 void loop(void)
 {
   stabilizeTempFromSensor();
-  Input = getFreshTemp();
-  myPID.Compute();
+  //Input = getFreshTemp();
+  //myPID.Compute();
   
   readButtons();  
   //display the current sensor temperature in status bar
@@ -52,7 +49,7 @@ void loop(void)
   /************************************************
    * turn the output pin on/off based on pid output
    ************************************************/
-  if(millis() - windowStartTime>WindowSize)
+  /*if(millis() - windowStartTime>WindowSize)
   { //time to shift the Relay Window
     windowStartTime += WindowSize;
   }
@@ -61,4 +58,5 @@ void loop(void)
     digitalWrite(HEATER_PIN, HIGH);
   else 
     digitalWrite(HEATER_PIN, LOW);
+    */
 }
